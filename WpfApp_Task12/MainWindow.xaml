@@ -12,18 +12,19 @@
             <Setter Property="FontSize" Value="13"/>
             <Setter Property="HorizontalAlignment" Value="Center"/>
             <Setter Property="VerticalAlignment" Value="Top"/>
+            <Setter Property="Foreground" Value="Gray"/>
             <Setter Property="Template">
                 <Setter.Value>
                     <ControlTemplate TargetType="CheckBox">
                         <UniformGrid Rows="2">
                             <Grid HorizontalAlignment="Center" VerticalAlignment="Bottom">
-                                <Path Stroke="Gray" StrokeThickness="2">
+                                <Path Stroke="{TemplateBinding Foreground}" StrokeThickness="2">
                                     <Path.Data>
                                         <RectangleGeometry Rect="0,0,20,20" RadiusX="3" RadiusY="3" />
                                     </Path.Data>
                                 </Path>
-                                <Path x:Name="checkedCheckBox" Fill="Gray" Opacity="0" Data="M 2,3 L 6,3 10,8 14,3 18,3 12,10 18,17 14,17 10,12 6,17 2,17 8,10 z"/>
-                                <Path x:Name="indeterminateCheckBox"  Fill="Gray" Opacity="0">
+                                <Path x:Name="checkedCheckBox" Fill="{TemplateBinding Foreground}" Opacity="0" Data="M 2,3 L 6,3 10,8 14,3 18,3 12,10 18,17 14,17 10,12 6,17 2,17 8,10 z"/>
+                                <Path x:Name="indeterminateCheckBox"  Fill="{TemplateBinding Foreground}" Opacity="0">
                                     <Path.Data>
                                             <EllipseGeometry Center="10,10" RadiusX="5" RadiusY="5"/>
                                     </Path.Data>
